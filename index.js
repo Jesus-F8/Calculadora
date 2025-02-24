@@ -1,8 +1,32 @@
-let a=1;
-let b=3;
+document.addEventListener("DOMContentLoaded", function () {
+const total=document.getElementById("display");
+const btt=document.querySelectorAll(".botones button");
 
 
 
+btt.forEach(button =>{
+
+button.addEventListener("click", function(){
+ const buttonText=this.innerText;
+ if(!(buttonText==="C"|| buttonText==="←"||buttonText==="="))
+ {
+    alert(buttonText)
+  display.value+=buttonText;
+ }
+
+     if(buttonText==="C" )                                                                                      
+        {
+            display.value="";
+        }
+    if (buttonText==="←") {
+        display.value=display.value.slice(0, -1);     
+    }    
+
+
+
+    });
+
+});
 
 let suma =( ...b) =>
     {
@@ -28,14 +52,8 @@ let division =(  ...b) =>
         return divt;
     }
  
-    console.log();
+});
+
+
+
  
-alert(suma(1,2,3,4,5))
-alert(resta(1,2,3,4,5))
-alert(m(1,2,3,4,5))
-alert(division(1,2,3,4,5))
-
-
-
-
-
